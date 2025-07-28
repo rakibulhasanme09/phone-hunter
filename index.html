@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="p-4">
+
+    <header>
+        <nav class="navbar bg-base-100 shadow-lg rounded-box flex justify-between">
+            <a class="btn btn-ghost normal-case text-3xl">PhoneZone</a>
+            <div class="form-control">
+                    <div class="input-group flex gap-4">
+                        <input type="text" placeholder="Search…" id="search" class="input input-bordered" />
+                        <button class="btn btn-square" onclick="handleSearch()">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </button>
+                        <button class="btn btn-square hidden" onclick="handleSearch2()">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="my-8">
+            <div class="flex justify-center">
+                
+            </div>
+        </section>
+
+        <section id="phones" class="my-8">
+
+            <h2 class="text-3xl font-bold text-center mb-8">Our Phones</h2>
+
+            <div class="flex justify-center my-20 hidden" id="loader">
+                <span class="loading loading-dots loading-xl"></span>
+            </div>
+            <div class="flex justify-center aline-center my-20 hidden" id="notFound">
+                <p class="text-5xl font-black">Not Found</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4" id="container">
+
+            </div>
+        </section>
+        <div class="flex justify-center mb-2">
+            <button class="btn hidden" id="showAll">Show All</button>
+        </div>
+
+        <dialog id="my_modal_3" class="modal">
+            <div class="modal-box max-w-3xl">
+                <form method="dialog">
+                    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                </form>
+                <div id="details">
+
+                </div>
+            </div>
+        </dialog>
+    </main>
+
+    <footer class="footer p-10 bg-neutral text-neutral-content rounded-box">
+        <div>
+            <span class="footer-title">Services</span>
+            <a class="link link-hover">Branding</a>
+            <a class="link link-hover">Design</a>
+            <a class="link link-hover">Marketing</a>
+            <a class="link link-hover">Advertisement</a>
+        </div>
+        <div>
+            <span class="footer-title">Company</span>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Jobs</a>
+            <a class="link link-hover">Press kit</a>
+        </div>
+        <div>
+            <span class="footer-title">Legal</span>
+            <a class="link link-hover">Terms of use</a>
+            <a class="link link-hover">Privacy policy</a>
+            <a class="link link-hover">Cookie policy</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
